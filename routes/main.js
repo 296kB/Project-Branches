@@ -5,3 +5,4 @@ const authMiddleware = require('../middleware/auth')
 
 router.get('/', homeController.getIndex)
 
+
