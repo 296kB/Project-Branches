@@ -1,14 +1,15 @@
 const bcrypt = require('bcrypt')
 const { ObjectId } = require('mongodb')
 const mongoose = require('mongoose')
+const Project = require('./Project')
 
 const UserSchema = new mongoose.Schema({
-  userName: { type: String, unique: true, trim: true },
-  email: { type: String, unique: true, trim: true },
-  password: String,
+  userName: { type: String, unique: true, trim: true, required: true},
+  email: { type: String, unique: true, trim: true, required: true},
+  password: { type: String, required: true},
   firstName: { type: String, trim: true },
   lastName: { type: String, trim: true },
-  projects: [{ type: ObjectId, ref: 'Project' }]  // should an array of objectids that can populate based on the Project model. Hopefully it works
+  projects: [{ type: ObjectId, ref: 'Project' }]  // should be an array of objectids that can populate based on the Project model. Hopefully it works
 })
 
 
