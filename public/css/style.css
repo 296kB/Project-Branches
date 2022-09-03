@@ -1,0 +1,120 @@
+  /* MOBILE VIEW */
+  @media screen and (max-width: 480px) {
+    
+  /*   INDIVIDUAL PROJECT VIEW */
+    #mark-complete-button, 
+    #delete-project-button, 
+    #back-to-projects {
+      width: 96%;
+      margin: 2%;
+    }
+    
+  
+    
+  }
+  
+  /* Desktop View */
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  h1, .header {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 7rem;
+      text-align: center;
+      font-style: bold;
+  }
+  
+  h3 {
+      font-weight: 300;
+  }
+  
+  form {
+     justify-content:right;
+     width:40%;
+  }
+  
+  form input {
+      flex-direction: column;
+  }
+  
+  img {
+      width:60%
+  }
+  
+  .primary-black-btn{
+      background-color: black;
+      border-color: black;
+  }
+  
+  .secondary-white-btn {
+      background-color: white;
+      color:black;
+      border-color: black;
+  }
+  
+  .flex-container {
+      display:flex;
+  }
+  
+  #individual-project-buttons{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  #mark-complete-button, 
+  #delete-project-button, 
+  #back-to-projects {
+    width: 25%;
+    margin: 2%;
+  }
+  
+  #delete-project-button{
+    background-color: red;
+    color: white;
+    border-color: white;
+  }
+  
+  #delete-project-button:hover{
+    background-color: black;
+    color: red;
+    border-color: red;
+  }
+  
+  
+  
+  
+
+  
+  .header {
+    color: white;
+    font-size: 32px
+  }
+  
+  .signUpForm {
+    margin: 0 auto;
+  }
+  
+  .signUpButton {
+    width: 40%;
+    margin: 0 auto;
+  }
+  
+  .alignCenter {
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  footer {
+    background-color: white;
+    height: 10px;
+  }
+  .alignRight {
+    text-align:right;
+    color: black;
+    margin: auto 0;
+  }
