@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">                            
-    <title>Branches Sign Up</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"           
+  rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="/css/style.css"
+  <title>Branches Sign Up</title>
 </head>
+
 <body>
-    <%- include('partials/header') %>
 
-    <section>
-        <h2>Sign Up</h2>
-        <form action="/signup" method="post">
-            <label for="First Name" >First Name</label>
-            <input type="text" name="firstName">
-            <label for="Last Name">Last Name</label>
-            <input type="text" name="lastName">
-            <label for="Email Address" >Email Address</label>
-            <input type="email" name="emailAddress">
-            <label for="Username">Username</label>
-            <input type="text" name="Username">
-            <label for="Password">Password</label>
-            <input type="password" name="password">
-            <button type="submit">Sign Up</button>
-        </form>
-        <button><a href="index.ejs">Back to Login</a></button>
-    </section>
+<%- include('partials/header') %>
 
-    <%- include('partials/footer') %>
+  <section>
+    <h2 class="alignCenter header">Sign Up</h2>
+    <form action="/signup" method="post" class='signUpForm'>
+      <label for="First Name">First Name</label>
+      <input type="text" name="firstName">
+      <label for="Last Name">Last Name</label>
+      <input type="text" name="lastName">
+      <label for="Email Address">Email Address</label>
+      <input type="email" name="emailAddress">
+      <label for="Username">Username</label>
+      <input type="text" name="Username">
+      <label for="Password">Password</label>
+      <input type="password" name="password">
+      <button type="submit" class='primary-black-btn'>Sign Up</button>
+    </form>
+    <button class="secondary-white-btn signUpButton"><a href="homepage.html">Back to Login</a></button>
+  </section>
+  
+<%- include('partials/footer') %>
+
 </body>
+
 </html>
+
