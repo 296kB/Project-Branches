@@ -39,6 +39,7 @@ app.use(passport.session())
 app.use(flash())
   
 app.use('/', mainRoutes)
+app.use('/signup', mainRoutes)
 app.use('/dashboard', dashRoutes)
  
 app.listen(process.env.PORT, ()=>{
