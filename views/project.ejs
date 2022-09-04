@@ -11,6 +11,9 @@
 
     </head>    
     <body>
+
+        <%- include('partials/header') %>
+
       <section id='individual-project-data' class='container'>
         <h2><%= projectData.project_name %></h2>
         <h3><%= projectData.due_date %></h3>
@@ -32,6 +35,8 @@
           <button id='delete-project-button' class='delete-project'>Delete Project</button> 
       
       </section>
+
+      <%- include('partials/footer') %>
 
     </body>
 </html>
