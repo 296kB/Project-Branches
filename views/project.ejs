@@ -3,13 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Branches - <%= projectArray[0].name %></title>
+        <title>Branches Project - <%= projectArray[0].name %></title>
 
         <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        <link rel='stylesheet' href='style.css'>
 
     </head>    
     <body>
-       
+      <section id='individual-project-data' class='container'>
+        <h2><%= projectData.project_name %></h2>
+        <h3><%= projectData.due_date %></h3>
+        <ul id="team-members">
+            <% projectData.members.forEach(x => { %>
+                <li class="member">
+                    <%= x.member_name %>
+                </li>
+            })
+        </ul>
+        <h4>Description</h4>
+        <span class='projectDesc'><%= projectData.description %></span>
+
+      </section>
+      
+      <section id='individual-project-buttons' class='container'>
+          <button id='mark-complete-button' class='outline'>Mark Complete</button>
+          <a href='/dashboard' role='button' class='contrast outline' id='back-to-projects'>Back to Projects</a>
+          <button id='delete-project-button' class='delete-project'>Delete Project</button> 
+      
+      </section>
 
     </body>
 </html>
