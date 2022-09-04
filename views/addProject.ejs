@@ -15,7 +15,7 @@
   <main>
     <div class="container">
       <h2>Add Project</h2>
-      <form action="">
+      <form action="/postProject" method="POST">
         <label for="title">
           Title
           <input type="text" id="title" name="title" placeholder="Project Title" required>
@@ -56,7 +56,7 @@
             required></textarea>
         </label>
 
-        <button type="" class="contrast">+ Add Project</button>
+        <button type="submit" class="contrast">+ Add Project</button>
         <button type="" class="contrast outline">← Back to Projects</button>
 
       </form>
