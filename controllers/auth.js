@@ -58,7 +58,7 @@ const User = require('../models/User')
     const validationErrors = []
     if (!validator.isEmail(req.body.email)) validationErrors.push({ msg: 'Please enter a valid email address.' })
     if (!validator.isLength(req.body.password, { min: 8 })) validationErrors.push({ msg: 'Password must be at least 8 characters long' })
-    if (req.body.password !== req.body.confirmPassword) validationErrors.push({ msg: 'Passwords do not match' })
+    // if (req.body.password !== req.body.confirmPassword) validationErrors.push({ msg: 'Passwords do not match' })
   
     if (validationErrors.length) {
       req.flash('errors', validationErrors)
@@ -67,7 +67,7 @@ const User = require('../models/User')
     req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
   
     const user = new User({
-      userName: req.body.userName,
+      username: req.body.username,
       email: req.body.email,
       password: req.body.password,
       firstName: req.body.firstName || '',  // first and last names are optional
@@ -76,7 +76,7 @@ const User = require('../models/User')
   
     User.findOne({$or: [
       {email: req.body.email},
-      {userName: req.body.userName}
+      {username: req.body.username}
     ]}, (err, existingUser) => {
       if (err) { return next(err) }
       if (existingUser) {
