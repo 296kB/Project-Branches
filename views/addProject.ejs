@@ -26,29 +26,34 @@
           <input type="date" id="dueDate" name="dueDate">
         </label>
 
-        <details role="list">
-          <summary aria-haspopup="listbox">Team Members</summary>
-          <ul role="listbox">
-            <li>
-              <label>
-                <input type="checkbox">
-                Bob (signed in user)
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox">
-                Other Team Member
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox">
-                Other Team Member
-              </label>
-            </li>
-          </ul>
-        </details>
+         <label for="members">
+          Team Members
+          <input type="text" id="members" name="members" placeholder="Team Members" required>
+          </label>
+
+          <!--<details role="list">
+            <summary aria-haspopup="listbox">Team Members</summary>
+            <ul role="listbox">
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Bob (signed in user)
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Other Team Member
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox">
+                  Other Team Member
+                </label>
+              </li>
+            </ul>
+          </details> -->
 
         <label for="description">
           Description
