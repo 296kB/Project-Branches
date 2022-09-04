@@ -4,13 +4,10 @@
 warning: rgb(241, 71, 37)
 warning - delete button: rgb(241, 71, 37, .7)
 warning - dashboard card: rgb(241, 71, 37, .3)
-
 complete - icon: rgb(143, 209, 79)
 complete - button and dashboard card: rgb(206, 231, 65, .3)
-
 alert: rgb(181, 143, 0)
 alert - dashboard card: rgb(247, 211, 83, .3)
-
 neutral: rgb(45, 155, 240)
 neutral - dashboard card: rgb(45 155 240, .1)
 */
@@ -193,7 +190,7 @@ body>main {
     width:50%
   }
   
-  }
+  }                                               
   
   #footer, .partialHeader{
     margin: 0;
@@ -229,7 +226,7 @@ body>main {
   
   footer {
   background-color: white;
-  height: 50px;
+  height: 10px;
   }
   .footer {
   margin: auto 0;
