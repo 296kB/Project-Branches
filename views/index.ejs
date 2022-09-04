@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <title>branches</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Branches</title>
 </head>
 
 <body>
@@ -21,10 +21,8 @@
       <img src="/assets/branches-project-management-doodle.png" width="500" height="500">
 
       <div>
-        <form>
+        <form action="/login" method = "POST">
           <h3> A project tracking app</h3>
-
-
           <label for="username">
             Username
             <input type="text" id="username" name="username" required>
@@ -37,9 +35,8 @@
 
           <!-- Buttons -->
           <button type="login" class="contrast">Login</button>
-          <button type="signup" class="contrast outline">Signup</button>
-          <a href="" class="contrast"> Use a guest account</a>
-
         </form>
+        <button type="signup" class="contrast outline" onclick="location.href='/signup';">Signup</button>
+        <a href="" class="contrast"> Use a guest account</a>
       </div>
   </main>

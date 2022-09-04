@@ -4,8 +4,9 @@ const dashController = require('../controllers/dashboard')
 const projController = require('../controllers/project')
 const authMiddleware = require('../middleware/auth')
 
-router.get('/', dashController.getProjects)
-router.post('/postProject', projController.createProject)
-router.get('/project', projController.getProject)
+
+router.get('/', dashController.getDash)
+// router.post('/postProject', dashController.postProject)
+// router.delete('/delete', dashController.deleteProject)
 
 module.exports = router

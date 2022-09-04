@@ -41,12 +41,12 @@
             <tbody>
               <tr>
                 <th scope="row"> 1</th>
-                <%= projects.forEach(x=> { %>
-                  <td class="project-item" data-id='<%=x._id %>'><a href="/dashboard/project?_id=<%= projects._id %>">
-                    <%=x.title %>
-                      <%=x.dueDate %>
-                  </a></td>
-                  })
+                <% projectData.forEach(project => { %>
+                  <td class="project-item" data-id='<%=project._id %>'>
+                    <%=project.title %>
+                      <%=project.dueDate %>
+                  </td>
+                  <% }) %>
 
               </tr>
           </table>
