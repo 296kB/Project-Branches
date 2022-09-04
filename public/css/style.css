@@ -204,7 +204,7 @@ body>main {
   
   .header {
   color: white;
-  font-size: 32px
+  font-size: 40px
   }
   
   .signUpForm {
@@ -226,7 +226,7 @@ body>main {
   
   footer {
   background-color: white;
-  height: 10px;
+  height: 50px;
   }
   .footer {
   margin: auto 0;
