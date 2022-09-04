@@ -68,6 +68,7 @@ const User = require('../models/User')
   
     const user = new User({
       username: req.body.username,
+      usernameLower: req.body.username.toLowerCase(),
       email: req.body.email,
       password: req.body.password,
       firstName: req.body.firstName || '',  // first and last names are optional
