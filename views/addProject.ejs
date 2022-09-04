@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branches Add Project</title>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <h2>Add Project</h2>
+      <form action="">
+        <label for="title">
+          Title
+          <input type="text" id="title" name="title" placeholder="Project Title" required>
+        </label>
+
+        <label for="dueDate">
+          Due Date
+          <input type="date" id="dueDate" name="dueDate">
+        </label>
+
+        <details role="list">
+          <summary aria-haspopup="listbox">Team Members</summary>
+          <ul role="listbox">
+            <li>
+              <label>
+                <input type="checkbox">
+                Bob (signed in user)
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                Other Team Member
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox">
+                Other Team Member
+              </label>
+            </li>
+          </ul>
+        </details>
+
+        <label for="description">
+          Description
+          <textarea type="text" id="description" name="description" placeholder="Add some details about your project..."
+            required></textarea>
+        </label>
+
+        <button type="" class="contrast">+ Add Project</button>
+        <button type="" class="contrast outline">← Back to Projects</button>
+
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
