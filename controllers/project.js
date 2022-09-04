@@ -5,7 +5,7 @@ const Project = require('../models/Project')
 // Model name: Project
 module.exports = {
 
-    getProject: (req,res)=>{
+    getProject: async (req,res)=>{
         try{
             const data = await Project.findOne({_id: req.query._id})
             console.log(data)
