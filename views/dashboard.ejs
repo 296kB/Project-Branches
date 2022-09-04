@@ -6,7 +6,7 @@
   <meta name="viewport" content="width= , initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Projects</title>
 </head>
 
@@ -19,7 +19,7 @@
       <div class="wrapper">
         <h2>Projects</h2>
         <hgroup class="hgroup-flex-container">
-          <h3>Hi, Bob!</h3>
+          <h3>Hi, <%= user.firstName %>!</h3>
           <span> Today is <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit'
               }).format(new Date()) %>
           </span>

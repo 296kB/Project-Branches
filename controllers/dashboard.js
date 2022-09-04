@@ -13,7 +13,7 @@ module.exports = {
         projectData.push(project)
     }
     console.log(projectData)
-    res.render('dashboard.ejs', {projectData: projectData})
+    res.render('dashboard.ejs', {projectData: projectData, user: req.user})
   }
 };
 
