@@ -7,7 +7,6 @@ warning - dashboard card: rgb(241, 71, 37, .3)
 
 complete - icon: rgb(143, 209, 79)
 complete - button and dashboard card: rgb(206, 231, 65, .3)
-
 alert: rgb(181, 143, 0)
 alert - dashboard card: rgb(247, 211, 83, .3)
 
@@ -130,6 +129,7 @@ body>main {
   background-color: rgb(241, 71, 37, .7);
   color: white;
   border-color: white;
+
   }
   
   #mark-complete-button{
@@ -172,6 +172,7 @@ body>main {
     margin: 0 auto
   } */
   
+
   /* HOMEPAGE VIEW */
   /* .homepage.wrapper {
     max-width: 90vw;
@@ -207,7 +208,9 @@ body>main {
   
   .header {
   color: white;
-  font-size: 32px
+
+  font-size: 40px
+
   }
   
   .signUpForm {
@@ -229,7 +232,9 @@ body>main {
   
   footer {
   background-color: white;
-  height: 10px;
+
+  height: 50px;
+
   }
   .footer {
   margin: auto 0;
