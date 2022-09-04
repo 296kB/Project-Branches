@@ -1,18 +1,21 @@
-const Project = require('../models/Project')
-const User = require('../models/User')
+const Project = require("../models/Project");
+const User = require("../models/User");
 
-// getProjects, 
+// getProjects,
 module.exports = {
-    getProjects: async (req, res) => {
-        console.log(req.user)
-        try {
-            const projects = await User.find({username: req.user.username})
-            res.render('dashboard.ejs', {projects: projects, user: req.user})
-        } catch(err) {
-            console.log(err)
-        }
+  getDash: async (req, res) => {
+    console.log('user', req.user);
+    // const projects = await User.find({ username: req.user.username });
+    let projectIds = req.user.projects
+    let projectData = []
+    for(let id of projectIds) {
+        let project = await Project.find({_id: id})
+        projectData.push(project)
     }
-}
+    console.log(projectData)
+    res.render('dashboard.ejs', {projectData: projectData})
+  }
+};
 
 // const Todo = require('../models/Todo')
 
@@ -68,4 +71,4 @@ module.exports = {
 //             console.log(err)
 //         }
 //     }
-// }    
+// }

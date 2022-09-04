@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
 
   <link rel="stylesheet" href="style.css">
-  <title>branches</title>
+  <title>Branches</title>
 </head>
 
 <body>
@@ -20,10 +20,8 @@
     <div class="flex-container">
       <img src="open-doodles-meditating.png" width="500" height="500">
       <div>
-        <form>
+        <form action="/login" method = "POST">
           <h3> A project tracking app</h3>
-
-
           <label for="username">
             Username
             <input type="text" id="username" name="username" required>
@@ -36,9 +34,8 @@
 
           <!-- Buttons -->
           <button type="login" class="contrast">Login</button>
-          <button type="signup" class="contrast outline">Signup</button>
-          <a href="" class="contrast"> Use a guest account</a>
-
         </form>
+        <button type="signup" class="contrast outline" onclick="location.href='/signup';">Signup</button>
+        <a href="" class="contrast"> Use a guest account</a>
       </div>
   </main>

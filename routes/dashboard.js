@@ -3,7 +3,7 @@ const router = express.Router()
 const dashController = require('../controllers/dashboard')
 const authMiddleware = require('../middleware/auth')
 
-// router.get('/', dashController.getDash)
+router.get('/', dashController.getDash)
 // router.post('/postProject', dashController.postProject)
 // router.delete('/delete', dashController.deleteProject)
 
