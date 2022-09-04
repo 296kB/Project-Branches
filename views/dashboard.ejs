@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Projects</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+    <!-- Main container -->
+    <main class="container">
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <hgroup class="hgroup-flex-container">
+          <h3>Hi, <%= user.firstName %>!</h3>
+          <span> Today is <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit'
+              }).format(new Date()) %>
+          </span>
+        </hgroup>
+        <button type="submit" class="contrast" id="add-project-small-btn" onclick="location.href='/dashboard/addProject';">+ Add Project</button>
+
+        <!-- Project table list -->
+        <section class="projects-list">
+          <table role="grid">
+            <!-- cols -->
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Recently assigned projects</th>
+                <th scope="col">Due date</th>
+              </tr>
+            </thead>
+            <!-- rows -->
+            <tbody>
+              <tr>
+                <th scope="row"> 1</th>
+                <% projectData.forEach(project => { %>
+                  <td class="project-item" data-id='<%=project._id %>'>
+                    <%=project.title %>
+                      <%=project.dueDate %>
+                  </td>
+                  <% }) %>
+
+              </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Branches</title>
+</head>
+
+<body>
+
+  <main class="container homepage">
+    <h1>branches</h1>
+    <div class="flex-container">
+
+      <img src="/assets/branches-project-management-doodle.png" width="500" height="500">
+
+      <div>
+        <form action="/login" method = "POST">
+          <h3> A project tracking app</h3>
+          <label for="username">
+            Username
+            <input type="text" id="username" name="username" required>
+          </label>
+
+          <label for="password">
+            Password
+            <input type="text" id="password" name="password" required>
+          </label>
+
+          <!-- Buttons -->
+          <button type="login" class="contrast">Login</button>
+        </form>
+        <button type="signup" class="contrast outline" onclick="location.href='/signup';">Signup</button>
+        <a href="" class="contrast"> Use a guest account</a>
+      </div>
+  </main>
