@@ -23,11 +23,6 @@ const ProjectSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
-  creatorId: {
-    type: ObjectId,
-    ref: 'User',
-    required: true
-  },
   teamMembers: [{
     type: ObjectId,
     ref: 'User'

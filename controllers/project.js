@@ -1,17 +1,21 @@
 
-const Project = request('../models/Project')
+const Project = require('../models/Project')
 
-// Schema: title, description, dueDate, status, creatorId, teamMembers
+// Schema: title, description, dueDate, status, teamMembers
 // Model name: Project
 module.exports = {
 
+    getProject: (req,res)=>{
+        res.render('project.ejs')
+    },
     createProject: async (req, res) => {
         try {
             await Project.create({
                 title: req.body.title,
                 description: req.body.description, 
                 dueDate: req.body.dueDate,
-                teamMembers: req.body.teamMembers
+                teamMembers: req.body.teamMembers || [],
+                status: false,
             })
         } catch (err) {
             console.log(err)
@@ -52,9 +56,7 @@ module.exports = {
 
 }
 
-module.exports = {
-    getProject: (req,res)=>{
-        res.render('project.ejs')
-    }
-}
+
+
+
 
