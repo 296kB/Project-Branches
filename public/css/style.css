@@ -1,129 +1,250 @@
-  /* MOBILE VIEW */
-  @media screen and (max-width: 480px) {
-    
-  /*   INDIVIDUAL PROJECT VIEW */
-    #mark-complete-button, 
-    #delete-project-button, 
-    #back-to-projects {
-      width: 96%;
-      margin: 2%;
-    }
+/******************************************
+/* COLOR VALUES
+/*******************************************
+warning: rgb(241, 71, 37)
+warning - delete button: rgb(241, 71, 37, .7)
+warning - dashboard card: rgb(241, 71, 37, .3)
 
+complete - icon: rgb(143, 209, 79)
+complete - button and dashboard card: rgb(206, 231, 65, .3)
+
+alert: rgb(181, 143, 0)
+alert - dashboard card: rgb(247, 211, 83, .3)
+
+neutral: rgb(45, 155, 240)
+neutral - dashboard card: rgb(45 155 240, .1)
+*/
+
+/* LAYOUT - ALL VIEWS */
+/* .wrapper {
+  max-width: 90vw;
+  margin: 0 auto;
+} */
+
+body>main {
+  padding-top: .5rem;
+  }
   
+  /* LAYOUT - HOMEPAGE MOBILE FIRST */
+  .homepage h1 {
+  font-size: 18vw;
+  }
+  
+  .homepage .flex-container {
+  flex-direction: column;
+  justify-content: center;
+  }
+  
+  .homepage img {
+    width:100%
     
   }
   
-#footer, .partialHeader{
-  margin: 0;
-  padding: 0;
-}
-
-#header{
-  margin: 30px 0 30px 40px;
-  padding: 0;
-}
-  /* Desktop View */
+  /* What is this doing? - brittany */
   html, body {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
   
   h1, .header {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 7rem;
-      text-align: center;
-      font-style: bold;
+    font-size: 7rem;
+    text-align: center;
+    font-style: bold;
+    margin-bottom: 1rem;
   }
+  
+  
   
   h3 {
-      font-weight: 300;
+    font-weight: 300;
   }
   
-  form {
-     justify-content:right;
-     width:40%;
-  }
+  /* is now better? :) */
+  .signup-form-desktop {  
+   justify-content:right;
+   width:40%;
+  } 
   
-  form input {
-      flex-direction: column;
-  }
+  
+  .signup-form-desktop input {
+    flex-direction: column;
+  } 
   
   img {
-      width:60%
+    width:60%
   }
   
   .primary-black-btn{
-      background-color: black;
-      border-color: black;
+    background-color: black;
+    border-color: black;
   }
   
   .secondary-white-btn {
-      background-color: white;
-      color:black;
-      border-color: black;
+    background-color: white;
+    color:black;
+    border-color: black;
   }
   
   .flex-container {
-      display:flex;
+    display:flex;
+  }
+  
+  strong{
+  color: rgb(241, 71, 37)
+  }
+  
+  #team-members{
+  display: flex;
+  flex-wrap: wrap;
+  }
+  
+  .member{
+  list-style-type: none;
   }
   
   #individual-project-buttons{
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
   }
   
   #mark-complete-button, 
   #delete-project-button, 
   #back-to-projects {
-    width: 25%;
-    margin: 2%;
+  width: 25%;
+  margin: 2%;
   }
   
   #delete-project-button{
-    background-color: red;
-    color: white;
-    border-color: white;
+  background-color: black;
+  color: rgb(241, 71, 37, .7);
+  border-color: rgb(241, 71, 37, .7);
+  
   }
   
   #delete-project-button:hover{
-    background-color: black;
-    color: red;
-    border-color: red;
+  background-color: rgb(241, 71, 37, .7);
+  color: white;
+  border-color: white;
   }
   
+  #mark-complete-button{
+  border-color: rgb(206, 231, 65, .3);
+  color: rgb(206, 231, 65, .3);
   
-  
-  
-
-  
-  .header {
-    color: white;
-    font-size: 38px
+  }
+  #mark-complete-button:hover{
+  background-color: rgb(206, 231, 65, .3);
+  border-color: white;
+  color: white;
+  }
+  #back-to-projects:hover{
+  background-color: white;
+  color: black;
+  border-color: black;
   }
   
-  .signUpForm {
+  /* MOBILE VIEW */
+  @media screen and (max-width: 480px) {
+  
+  /*   INDIVIDUAL PROJECT VIEW */
+  #mark-complete-button, 
+  #delete-project-button, 
+  #back-to-projects {
+    width: 96%;
+    margin: 2%;
+  }
+  #team-members{
+    flex-wrap: no-wrap;
+  }
+  
+  }
+  
+  /* DESKTOP VIEWS */
+  @media all and (min-width: 960px) {
+  
+  /* .wrapper {
+    max-width: 60vw;
+    margin: 0 auto
+  } */
+  
+  /* HOMEPAGE VIEW */
+  /* .homepage.wrapper {
+    max-width: 90vw;
     margin: 0 auto;
-  }
+  } */
   
-  .signUpButton {
-    width: 40%;
-    margin: 0 auto;
-  }
-  
-  .alignCenter {
+  .homepage h1 {
+    font-size: 19vmin;
     text-align: center;
   }
   
+  .homepage .flex-container {
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .homepage img {
+    width:50%
+  }
+  
+  }
+  
+  #footer, .partialHeader{
+    margin: 0;
+    padding: 0;
+  }
+  
+  #header{
+    margin: 30px 0 30px 40px;
+    padding: 0;
+  }
+  
+  .header {
+  color: white;
+  font-size: 32px
+  }
+  
+  .signUpForm {
+  margin: 0 auto;
+  }
+  
+  .signUpButton {
+  width: 40%;
+  margin: 0 auto;
+  }
+  
+  .alignCenter {
+  text-align: center;
+  }
+  
   a {
-    text-decoration: none;
+  text-decoration: none;
   }
   
   footer {
-    background-color: white;
-    height: 50px;
+  background-color: white;
+  height: 50px;
+  }
+  .footer {
+  margin: auto 0;
   }
   .alignRight {
-    text-align:right;
-    color: black;
-    margin: auto 0;
+  text-align:right;
+  color: black;
+  margin: auto 0;
+  }
+  
+  /*Projects-dashboard */
+  hgroup-flex-container {
+    display:flex;
+    flex-direction: column;
+  }
+  #add-project-small-btn {
+    width:30%;
   }
