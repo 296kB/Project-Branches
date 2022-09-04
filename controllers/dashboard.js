@@ -1,17 +1,17 @@
 const Project = require('../models/Project')
 const User = require('../models/User')
 
+// getProjects, 
 module.exports = {
     getProjects: async (req, res) => {
         console.log(req.user)
         try {
-            const projects = await User.find({})
+            const projects = await User.find({username: req.user.username})
+            res.render('dashboard.ejs', {projects: projects, user: req.user})
         } catch(err) {
             console.log(err)
         }
     }
-
-
 }
 
 // const Todo = require('../models/Todo')
