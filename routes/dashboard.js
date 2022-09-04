@@ -6,7 +6,7 @@ const {ensureAuth, ensureGuest} = require('../middleware/auth')
 
 
 router.get('/', ensureAuth, dashController.getDash)
-router.get('/addProject', dashController.makeNewProject)
+router.get('/addProject', dashController.addProject)
 // router.post('/postProject', dashController.postProject)
 // router.delete('/delete', dashController.deleteProject)
 

@@ -13,7 +13,7 @@ module.exports = {
             console.log(err)
         }
     },
-    createProject: async (req, res) => {
+    addProject: async (req, res) => {
         try {
             await Project.create({
                 title: req.body.title,
@@ -22,6 +22,7 @@ module.exports = {
                 teamMembers: req.body.teamMembers || [],
                 status: false,
             })
+            res.redirect('/dashboard')
         } catch (err) {
             console.log(err)
         }

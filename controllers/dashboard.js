@@ -15,7 +15,7 @@ module.exports = {
     console.log(projectData)
     res.render('dashboard.ejs', {projectData: projectData, user: req.user})
   },
-  makeNewProject: (req, res) => {
+  addProject: (req, res) => {
     res.render('addProject.ejs')
   }
 };
