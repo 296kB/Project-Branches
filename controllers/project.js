@@ -6,7 +6,13 @@ const Project = require('../models/Project')
 module.exports = {
 
     getProject: (req,res)=>{
-        res.render('project.ejs')
+        try{
+            const data = await Project.findOne({_id: req.query._id})
+            console.log(data)
+            res.render('project.ejs', {projectData: data})
+        } catch (err) {
+            console.log(err)
+        }
     },
     createProject: async (req, res) => {
         try {

@@ -15,12 +15,12 @@
         <%- include('partials/header') %>
 
       <section id='individual-project-data' class='container'>
-        <h2><%= projectData.project_name %></h2>
-        <h3><%= projectData.due_date %></h3>
+        <h2><%= projectData.title %></h2>
+        <h3><%= projectData.dueDate %></h3>
         <ul id="team-members">
-            <% projectData.members.forEach(x => { %>
+            <% projectData.teamMembers.forEach(x => { %>
                 <li class="member">
-                    <%= x.member_name %>
+                    <%= x.firstName %>
                 </li>
             })
         </ul>
