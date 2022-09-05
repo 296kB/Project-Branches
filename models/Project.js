@@ -13,7 +13,7 @@ const ProjectSchema = new mongoose.Schema({
   description: String,
   startDate: {
     type: Date,
-    required: true
+    required: false // changing to false for now as we don't have a field in addProject and aren't leveraging it
   },
   dueDate: {
     type: Date,
@@ -22,6 +22,10 @@ const ProjectSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     required: true,
+  },
+  userId: {
+    type: String,
+    required: true
   },
   teamMembers: [{
     type: ObjectId,

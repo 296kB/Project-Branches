@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width= , initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Projects</title>
 </head>
 
@@ -15,43 +15,24 @@
   <%- include('partials/header') %>
 
     <!-- Main container -->
-    <main class="container">
-      <div class="wrapper">
+    <main class="container dashboard">
         <h2>Projects</h2>
-        <hgroup class="hgroup-flex-container">
+        <div class="headings">
           <h3>Hi, <%= user.firstName %>!</h3>
-          <span> Today is <%= new Intl.DateTimeFormat('en-GB', { year: 'numeric' , month: 'long' , day: '2-digit'
-              }).format(new Date()) %>
-          </span>
-        </hgroup>
+          <span> <%= `Today is ${new Date().toLocaleDateString([], { weekday: 'long' })},${String.fromCharCode(160)}` %></span>
+          <span><%= new Date().toLocaleDateString([], { year: 'numeric' , month: 'long' , day: '2-digit' }) %></span>
+        </div>
         <button type="submit" class="contrast" id="add-project-small-btn" onclick="location.href='/dashboard/addProject';">+ Add Project</button>
 
-        <!-- Project table list -->
-        <section class="projects-list">
-          <table role="grid">
-            <!-- cols -->
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Recently assigned projects</th>
-                <th scope="col">Due date</th>
-              </tr>
-            </thead>
-            <!-- rows -->
-            <tbody>
-              <tr>
-                <th scope="row"> 1</th>
-                <% projectData.forEach(project => { %>
-                  <td class="project-item" data-id='<%=project._id %>'>
-                    <%=project.title %>
-                      <%=project.dueDate %>
-                  </td>
-                  <% }) %>
+        <% projectData.forEach( el => { %>
+          <article>
+            <h4 class="projectTitle" data-id='<%=el._id%>'><%= el.title %></h4>
+            <h4 class="dueDate"><%= el.dueDate.toLocaleDateString([], { month: 'short',
+              day: '2-digit' }) %></h4>
+            <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
+          </article>
+        <% }) %>
 
-              </tr>
-          </table>
-        </section>
-      </div>
     </main>
     <!-- Footer -->
     <%- include('partials/footer') %>

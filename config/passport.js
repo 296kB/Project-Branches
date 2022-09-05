@@ -4,7 +4,7 @@ const User = require('../models/User')
 
 module.exports = function (passport) {
   passport.use(new LocalStrategy({ usernameField: 'username' }, (username, password, done) => {
-    User.findOne({ username: username }, (err, user) => {
+    User.findOne({ usernameLower: username.toLowerCase() }, (err, user) => {
       if (err) { return done(err) }
       if (!user) {
         return done(null, false, { msg: `Username ${username} not found.` })
