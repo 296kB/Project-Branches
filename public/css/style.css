@@ -292,7 +292,7 @@ body>footer{
   }
 
   article > * {
-    margin-bottom: 1rem;
+    margin-bottom: .6rem;
   }
 
    /* Project Due Date Styling */
@@ -303,6 +303,15 @@ body>footer{
 
   .alert .dueDate {
     color: #B58F00;
+  }
+
+  .completed {
+    background-color: #F0F8C5;
+  }
+
+  .completed .fas.fa-check-circle {
+    color: #8FD14F;
+    font-size: 2rem;
   }
 
   .neutral {
