@@ -4,7 +4,8 @@ const Project = require('../models/Project')
 // Schema: title, description, dueDate, status, teamMembers
 // Model name: Project
 module.exports = {
-    getProject: async (req,res)=>{
+    getProject: async (req, res) => {
+        // console.log(req.query)
         try{
             const data = await Project.findOne({_id: req.query._id})
             console.log(data)
@@ -32,7 +33,7 @@ module.exports = {
     markComplete: async (req, res) => {
         try {
             await Project.findOneAndUpdate({_id:req.body.id}, {
-                completed: true
+                status: true
             })
             console.log('Completed Task')
             res.json('Completed Task')
@@ -54,9 +55,9 @@ module.exports = {
     deleteProject: async (req, res) => {
         console.log(req.body.id)
         try {
-            await Project.findOneAndUpdate({_id:req.body.id})
+            await Project.deleteOne({_id: req.body.id})
             console.log('Deleted Project')
-            res.json('Delete It')
+            res.redirect('/dashboard')
         } catch (error) {
             console.log(err)
         }
