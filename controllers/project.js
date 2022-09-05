@@ -5,7 +5,7 @@ const Project = require('../models/Project')
 // Model name: Project
 module.exports = {
     getProject: async (req, res) => {
-        console.log(req.query)
+        // console.log(req.query)
         try{
             const data = await Project.findOne({_id: req.query._id})
             console.log(data)
@@ -33,7 +33,7 @@ module.exports = {
     markComplete: async (req, res) => {
         try {
             await Project.findOneAndUpdate({_id:req.body.id}, {
-                completed: true
+                status: true
             })
             console.log('Completed Task')
             res.json('Completed Task')

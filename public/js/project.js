@@ -1,11 +1,11 @@
 const deleteBtn = document.getElementById('delete-project-button')
-
 // To mark projects as Complete/Incomplete linked to the projectDetail.ejs
 const projectComplete = document.getElementById('mark-complete-button')
 
 // Functions
 
 deleteBtn.addEventListener('click', deleteProject)
+projectComplete.addEventListener('click', markComplete)
 
 async function deleteProject(){
     const projectId = document.getElementById('projectIDblind').innerText
@@ -26,18 +26,18 @@ async function deleteProject(){
 }
 
 async function markComplete(){
-    const projectId = this.parentNode.dataset.id
+    const projectId = document.getElementById('projectIDblind').innerText
     try{
-        const response = await fetch('projectDetail/markComplete', {
+        const response = await fetch('markComplete', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
                 'id': projectId
             })
         })
-        const data = await response.json()
+        const data = await response.text
         console.log(data)
-        location.reload()
+        window.location.href = "/dashboard";
     }catch(err){
         console.log(err)
     }
