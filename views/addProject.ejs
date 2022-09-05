@@ -12,8 +12,10 @@
 </head>
 
 <body>
-  <main>
-    <div class="container">
+  <!-- Header -->
+  <%- include('partials/header') %>
+
+  <main class="container">
       <h2>Add Project</h2>
       <form action="/projects/addProject" method="POST">
         <label for="title">
@@ -64,8 +66,9 @@
         <button type="submit" class="contrast">+ Add Project</button>
       </form>
       <button type="" onclick="location.href='/dashboard';" class="contrast outline">← Back to Projects</button>
-    </div>
   </main>
+  <!-- Footer -->
+  <%- include('partials/footer') %>
 </body>
 
 </html>
