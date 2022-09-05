@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width= , initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Code+Pro&display=swap">
   <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/5160746515.js" crossorigin="anonymous"></script>
   <title>Projects</title>
 </head>
 
@@ -25,20 +26,22 @@
         <button type="submit" class="contrast" id="add-project-small-btn" onclick="location.href='/dashboard/addProject';">+ Add Project</button>
 
         <% projectData.forEach( el => { %>
-          <% if(Math.floor((el.dueDate - new Date())/86400000)>5) { %>
-            <a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>"><article class="neutral">
-            <% } else if (Math.floor((el.dueDate - new Date())/86400000)>=2) { %>
-              <a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>"><article class="alert">
-                <% } else { %>
-                  <a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>"><article class="warning">
+          <a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>">
+            <% if (el.status === true) { %><article class="completed">
+              <% } else if(Math.floor((el.dueDate - new Date())/86400000)>5) { %><article class="neutral">
+                <% } else if (Math.floor((el.dueDate - new Date())/86400000)>=2) { %><article class="alert">
+                  <% } else { %><article class="warning">
                     <% } %>
             <h4 class="projectTitle" data-id='<%=el._id%>'><%= el.title %></h4>
-            <h4 class="dueDate"><%= el.dueDate.toLocaleDateString([], { month: 'short',
-              day: '2-digit' }) %></h4>
-            <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
-          </article></a>
-        <% }) %>
 
+            <h4 class='<%= el.status === true ? 'fas fa-check-circle' : 'dueDate' %>'><%= el.status === true ? '' : el.dueDate.toLocaleDateString([], { month: 'short',
+              day: '2-digit' }) %></h4>
+
+            <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
+
+          </article>
+        </a>
+        <% }) %>
     </main>
     <!-- Footer -->
     <%- include('partials/footer') %>
