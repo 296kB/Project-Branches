@@ -13,7 +13,7 @@ const ProjectSchema = new mongoose.Schema({
   description: String,
   startDate: {
     type: Date,
-    required: false
+    required: false // changing to false for now as we don't have a field in addProject and aren't leveraging it
   },
   dueDate: {
     type: Date,
