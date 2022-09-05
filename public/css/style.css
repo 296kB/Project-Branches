@@ -166,18 +166,8 @@ body>main {
   
   /* DESKTOP VIEWS */
   @media all and (min-width: 960px) {
-  
-  /* .wrapper {
-    max-width: 60vw;
-    margin: 0 auto
-  } */
-  
 
   /* HOMEPAGE VIEW */
-  /* .homepage.wrapper {
-    max-width: 90vw;
-    margin: 0 auto;
-  } */
   
   .homepage h1 {
     font-size: 19vmin;
@@ -193,6 +183,9 @@ body>main {
   .homepage img {
     width:50%
   }
+
+  /* ADD PROJECT VIEW */
+
   
   }                                               
   
@@ -245,11 +238,44 @@ body>main {
   margin: auto 0;
   }
   
-  /*Projects-dashboard */
-  hgroup-flex-container {
+  /* PROJECTS DASHBOARD LAYOUT */
+  .container.dashboard .headings {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container.dashboard h3 {
+    font-size: 8vmin;
+    flex-basis: 100%;
+  }
+
+  .container.dashboard .headings>span {
+    font-size: 6vmin;
+  }
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3vmin 0;
+    padding: 5vmin;
+  }
+
+  article h4 {
+    flex-basis: 50%;
+  }
+  
+  article h4.dueDate {
+    text-align: right;
+  }
+
+  article > * {
+    margin-bottom: 1rem;
+  }
+
+  /* hgroup-flex-container {
     display:flex;
     flex-direction: column;
-  }
-  #add-project-small-btn {
+  } */
+  /* #add-project-small-btn {
     width:30%;
-  }
+  } */
