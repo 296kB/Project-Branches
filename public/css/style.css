@@ -20,6 +20,10 @@ neutral - dashboard card: rgb(45 155 240, .1)
   margin: 0 auto;
 } */
 
+.container {
+  min-height: 100vh;
+}
+
 body>main {
   padding-top: .5rem;
 }
@@ -36,6 +40,10 @@ body>main {
   
 .homepage img {
     width:100%
+}
+
+.homepage h3 {
+  margin: 5% 0 2% 0;
 }
   
 /* What is this doing? - brittany */
