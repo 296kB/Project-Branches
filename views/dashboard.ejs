@@ -25,12 +25,12 @@
         <button type="submit" class="contrast" id="add-project-small-btn" onclick="location.href='/dashboard/addProject';">+ Add Project</button>
 
         <% projectData.forEach( el => { %>
-          <article>
+          <article><a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>">
             <h4 class="projectTitle" data-id='<%=el._id%>'><%= el.title %></h4>
             <h4 class="dueDate"><%= el.dueDate.toLocaleDateString([], { month: 'short',
               day: '2-digit' }) %></h4>
             <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
-          </article>
+          </a></article>
         <% }) %>
 
     </main>

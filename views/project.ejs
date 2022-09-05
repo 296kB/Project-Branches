@@ -4,11 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Branches Project - <%= projectData.name %></title>
-
-        <link rel="stylesheet" href="/css/normalize.css">
+        
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-        <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='/css/style.css'>
 
     </head>    
     <body>
@@ -18,12 +17,9 @@
       <section id='individual-project-data' class='container'>
         <h2><%= projectData.title %></h2>
         <h3><%= projectData.dueDate %></h3>
+        <h4 id="projectIDblind"><%= projectData._id %></h4>
         <ul id="team-members">
-            <% projectData.teamMembers.forEach(x => { %>
-                <li class="member">
-                    <%= x.firstName %>
-                </li>
-            })
+ 
         </ul>
         <h4>Description</h4>
         <span class='projectDesc'><%= projectData.description %></span>
@@ -38,6 +34,7 @@
       </section>
 
       <%- include('partials/footer') %>
+      <script src='/js/project.js'></script>
 
     </body>
 </html>
