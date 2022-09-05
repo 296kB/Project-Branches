@@ -3,17 +3,27 @@ const User = require("../models/User");
 
 // getProjects,
 module.exports = {
-  getDash: async (req, res) => {
-    console.log('user', req.user);
-    // const projects = await User.find({ username: req.user.username });
-    let projectIds = req.user.projects
-    let projectData = []
-    for(let id of projectIds) {
-        let project = await Project.find({_id: id})
-        projectData.push(project)
+  // getDash: async (req, res) => {
+  //   console.log('user', req.user);
+  //   // const projects = await User.find({ username: req.user.username });
+  //   let projectIds = req.user.projects
+  //   let projectData = []
+  //   for(let id of projectIds) {
+  //       let project = await Project.find({_id: id})
+  //       projectData.push(project)
+  //   }
+  //   console.log(projectData)
+  //   res.render('dashboard.ejs', {projectData: projectData, user: req.user})
+  // },
+  getDash: async (req,res)=>{
+    console.log(req.user)
+    try{
+        const projects = await Project.find({userId:req.user.id})
+        res.render('dashboard.ejs', {projectData: projects, user: req.user})
+        console.log(projects)
+    }catch(err){
+        console.log(err)
     }
-    console.log(projectData)
-    res.render('dashboard.ejs', {projectData: projectData, user: req.user})
   },
   addProject: (req, res) => {
     res.render('addProject.ejs')
