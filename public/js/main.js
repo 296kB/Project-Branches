@@ -75,3 +75,11 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+
+document.querySelector('#guestAccount').addEventListener('click',fillLogin);
+
+function fillLogin(){
+    document.querySelector('#username').value = 'branchesGuest'
+    document.querySelector('#password').value = 'branchesGuest'
+    console.log('Test21')
+}
