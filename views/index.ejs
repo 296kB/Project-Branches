@@ -30,15 +30,24 @@
 
           <label for="password">
             Password
-            <input type="text" id="password" name="password" required>
+            <input type="password" id="password" name="password" required>
           </label>
 
           <!-- Buttons -->
           <button type="login" class="contrast">Login</button>
         </form>
         <button type="signup" class="contrast outline" onclick="location.href='/signup';">Signup</button>
-        <a href="" class="contrast"> Use a guest account</a>
+        <span class="contrast" id="guestAccount">Use a guest account</span>
       </div>
-      <!-- Footer -->
-      <%- include('partials/footer') %>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <%- include('partials/footer') %>
+
+
+    <script src="js/main.js"></script>    
+
   </main>
