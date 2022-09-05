@@ -270,12 +270,21 @@ body>footer{
   article {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin: 3vmin 0;
     padding: 5vmin;
   }
 
+  article p {
+    width: 100%;
+  }
+
   article h4 {
-    flex-basis: 50%;
+    width: fit-content;
+  }
+
+  article p, article h4 {
+    color: #374956;
   }
   
   article h4.dueDate {
