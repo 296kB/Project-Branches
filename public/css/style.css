@@ -71,6 +71,12 @@ a {
   text-decoration: underline;
 }
 
+.link-to-project{
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -86,6 +92,10 @@ header a {
   color: var(--contrast);
   font-size: 1.25rem;
   text-decoration: none;
+}
+
+#projectIDblind{
+  display: none;
 }
 
 #logo {
@@ -135,6 +145,10 @@ img {
   .member{
   list-style-type: none;
   }
+
+  #individual-project-data{
+      min-height: 50%;
+    }
   
   #individual-project-buttons{
   display: flex;
@@ -147,6 +161,7 @@ img {
   #back-to-projects {
   width: 25%;
   margin: 2%;
+  height: 30%;
   }
   
   #delete-project-button{
