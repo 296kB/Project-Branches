@@ -13,7 +13,7 @@ const ProjectSchema = new mongoose.Schema({
   description: String,
   startDate: {
     type: Date,
-    required: true
+    required: false
   },
   dueDate: {
     type: Date,
@@ -22,6 +22,10 @@ const ProjectSchema = new mongoose.Schema({
   status: {
     type: Boolean,
     required: true,
+  },
+  userId: {
+    type: String,
+    required: true
   },
   teamMembers: [{
     type: ObjectId,
