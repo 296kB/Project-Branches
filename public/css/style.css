@@ -286,6 +286,32 @@ body>footer{
     margin-bottom: 1rem;
   }
 
+   /* Project Due Date Styling */
+
+   .alert {
+    background-color: #FBD757;
+  }
+
+  .alert .dueDate {
+    color: #B58F00;
+  }
+
+  .neutral {
+    background-color: #E9F5FE;
+  }
+
+  .neutral .dueDate {
+    color: #2D9BF0;
+  }
+
+  .warning {
+    background-color: #FBC7BD;
+  }
+
+  .warning .dueDate {
+    color: #F24726;
+  }
+
   /* hgroup-flex-container {
     display:flex;
     flex-direction: column;
