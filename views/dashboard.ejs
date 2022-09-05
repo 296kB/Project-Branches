@@ -36,7 +36,7 @@
             <h4 class="dueDate"><%= el.dueDate.toLocaleDateString([], { month: 'short',
               day: '2-digit' }) %></h4>
             <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
-          </article>
+          </a></article>
         <% }) %>
 
     </main>
