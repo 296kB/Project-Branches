@@ -229,9 +229,6 @@ header a {
   text-align: center;
   }
 
-  .
-
-  
 footer {
   /* background-color: var(--contrast); */
   color: var(--contrast);
@@ -300,7 +297,7 @@ body>footer{
    /* Project Due Date Styling */
 
    .alert {
-    background-color: #FBD757;
+    background-color: #FEEEB6;
   }
 
   .alert .dueDate {
