@@ -114,9 +114,9 @@ header a {
   flex-direction: column;
 } 
   
-img {
+/* img {
   width:60%
-}
+} */
   
 .primary-black-btn{
     background-color: black;
@@ -228,6 +228,8 @@ img {
   .alignCenter {
   text-align: center;
   }
+
+  .
 
   
 footer {
@@ -356,6 +358,10 @@ body>footer{
     
     .homepage img {
       width:50%
+    }
+
+    .signup-img{
+      width: 30%
     }
   
     /* ADD PROJECT VIEW */
