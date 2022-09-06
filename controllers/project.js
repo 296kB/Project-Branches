@@ -20,7 +20,7 @@ module.exports = {
                 title: req.body.title,
                 description: req.body.description, 
                 dueDate: req.body.dueDate,
-                teamMembers: req.body.teamMembers || [],
+                teamMembers: req.body.teamMembers,
                 status: false,
                 userId: req.user.id,
             })
