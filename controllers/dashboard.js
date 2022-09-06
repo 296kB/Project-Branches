@@ -18,9 +18,9 @@ module.exports = {
   getDash: async (req,res)=>{
     console.log(req.user)
     try{
-        const projects = await Project.find({userId:req.user.id})
-        res.render('dashboard.ejs', {projectData: projects, user: req.user})
-        console.log(projects)
+      const projects = await Project.find({userId:req.user.id}).sort({ status: 1, dueDate: 1 } )
+      res.render('dashboard.ejs', {projectData: projects, user: req.user})
+      console.log(projects)
     }catch(err){
         console.log(err)
     }
