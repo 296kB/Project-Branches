@@ -1,10 +1,10 @@
 # Project Branches 🌳
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+A simple mobile and web app that allows users to create lists for their projects. Users can ass tasks, delete them and also mark them as complete.
+
+-- screenshot here  -- 
 
 ## Link to project: 
-http://recruiters-love-seeing-live-demos.com/
-
-![Live Preview](http://placecorgi.com/1200/650)
+https://project-branches-production.up.railway.app/
 
 ## How It's Made:
 
@@ -17,11 +17,11 @@ http://recruiters-love-seeing-live-demos.com/
 - Mongoose 
 - EJS
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+This was a 5 days long group project built during our time at the #100devs agency. Project goals included
+using technologies learned up until this point and familiarizing ourselves with the group work dynamics.
 
 ## Optimizations
 *(optional)*
-
 
 You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
 
@@ -42,6 +42,13 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 ---
 
+## Start server
+
+`npm run dev`
+
+
 ## Things to add
 
+Originally, we planned to include the possibility of sharing projects between the team members, however due 
+to project time constrains, we will have to implement it in the next iteration.
  ---
