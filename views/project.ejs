@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
         <link rel='stylesheet' href='/css/style.css'>
+        <script src="https://kit.fontawesome.com/5160746515.js" crossorigin="anonymous"></script>
 
     </head>    
     <body>
@@ -27,9 +28,13 @@
       </section>
       
       <section id='individual-project-buttons' class='container'>
-          <button id='mark-complete-button' class='outline'>Mark Complete</button>
+          <button id='mark-complete-button' class='primary'>
+            Mark Complete<i class="fas fa-check-circle"></i>
+          </button>
           <a href='/dashboard' role='button' class='contrast outline' id='back-to-projects'>Back to Projects</a>
-          <button id='delete-project-button' class='delete-project'>Delete Project</button> 
+          <button id='delete-project-button' class='delete-project'>
+            Delete Project<i class="fa-sharp fa-solid fa-xmark"></i>
+          </button> 
       
       </section>
 

@@ -27,6 +27,16 @@ neutral - dashboard card: rgb(45 155 240, .1)
 body>main {
   padding-top: .5rem;
 }
+
+.input-header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.input-header {
+  display: flex;
+  align-items: flex-end;
+}
   
  /* LAYOUT - HOMEPAGE MOBILE FIRST */
 .homepage h1 {
@@ -85,7 +95,9 @@ header {
 }
 
 body>header {
-  padding: .75rem 1.5rem .75rem 1.5rem;
+  padding: .75rem 0;
+  padding-right: var(--spacing);
+  padding-left: var(--spacing);
 }
 
 header a {
@@ -102,8 +114,18 @@ header a {
   font-size: 8vmin;
   font-weight: 600;
 }
+
+/* FONT AWESOME ICONS */
+
+.fas.fa-check-circle {
+  color: #8FD14F;
+}
+
+.fa-sharp.fa-solid.fa-xmark {
+  color: #fff;
+}
   
-/* is now better? :) */
+/* is now better? :)
 .signup-form-desktop {  
   justify-content:right;
   width:40%;
@@ -112,13 +134,13 @@ header a {
   
 .signup-form-desktop input {
   flex-direction: column;
-} 
+}  */
   
 /* img {
   width:60%
 } */
   
-.primary-black-btn{
+.primary-black-btn {
     background-color: black;
     border-color: black;
 }
@@ -133,9 +155,9 @@ header a {
     display:flex;
   }
   
-  strong{
+  /* strong{
   color: rgb(241, 71, 37)
-  }
+  } */
   
   #team-members{
   display: flex;
@@ -175,19 +197,32 @@ header a {
   background-color: rgb(241, 71, 37, .7);
   color: white;
   border-color: white;
-
   }
+
   
   #mark-complete-button{
-  border-color: rgb(206, 231, 65, .3);
-  color: rgb(206, 231, 65, .3);
+  background-color: #F0F8C5;
+  border-color: #F0F8C5;
+  color: #000;
+  }
   
-  }
   #mark-complete-button:hover{
-  background-color: rgb(206, 231, 65, .3);
-  border-color: white;
-  color: white;
+  background-color: #F0F8C5;
+  border-color: rgb(206, 231, 65, .3);
+  color: #000;
   }
+
+  #mark-complete-button:focus {
+    background-color: rgb(206, 231, 65, .3);
+  }
+
+  #mark-complete-button .fas.fa-check-circle,
+  #delete-project-button .fa-sharp.fa-solid.fa-xmark {
+    vertical-align: middle;
+    padding-left: .6rem;
+    font-size: 1.25rem;
+  }
+
   #back-to-projects:hover{
   background-color: white;
   color: black;
@@ -267,9 +302,8 @@ body>footer{
   }
 
   article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     margin: 3vmin 0;
     padding: 5vmin;
   }
@@ -279,7 +313,7 @@ body>footer{
   }
 
   article h4 {
-    width: fit-content;
+    font-size: 110%;
   }
 
   article p, article h4 {
@@ -287,7 +321,10 @@ body>footer{
   }
   
   article h4.dueDate {
+    width: 100%;
     text-align: right;
+    place-self: center;
+    grid-area: 1 / 2 / span 2 / span 1;
   }
 
   article > * {
@@ -309,12 +346,16 @@ body>footer{
   }
 
   .completed .fas.fa-check-circle {
-    color: #8FD14F;
+    width: 100%;
     font-size: 2rem;
+    text-align: right;
+    place-self: center;
+    grid-area: 1 / 2 / span 2 / span 1;
+    margin: 0;
   }
 
   .neutral {
-    background-color: #E9F5FE;
+    background-color: #D5EBFC;
   }
 
   .neutral .dueDate {
@@ -354,11 +395,13 @@ body>footer{
     }
     
     .homepage img {
-      width:50%
+      width: 50%;
     }
 
     .signup-img{
-      width: 30%
+      aspect-ratio: 1 / 1;
+      height: 10vw;
+      object-fit: contain;
     }
   
     /* ADD PROJECT VIEW */
