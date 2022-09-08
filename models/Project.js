@@ -27,10 +27,9 @@ const ProjectSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  teamMembers: {
+  teamMembers: [{
     type: String,
-    required: true,
-  }
+  }]
 })
 
 module.exports = mongoose.model('Project', ProjectSchema)

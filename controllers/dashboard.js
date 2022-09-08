@@ -1,7 +1,6 @@
 const Project = require("../models/Project");
 const User = require("../models/User");
 
-// getProjects,
 module.exports = {
   // getDash: async (req, res) => {
   //   console.log('user', req.user);
