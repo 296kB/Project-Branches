@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Branches Project - <%= projectData.name %></title>
-        
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-        <link rel='stylesheet' href='/css/style.css'>
-        <script src="https://kit.fontawesome.com/5160746515.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Branches Project - <%= projectData.name %></title>
 
-    </head>    
-    <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/5160746515.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/header') %>
 
-        <%- include('partials/header') %>
+    <section id="individual-project-data" class="container">
+      <h2><%= projectData.title %></h2>
+      <h4 class="project-text">Deadline</h4>
+      <h3><%= projectData.deadline %></h3>
+      <h4 id="projectIDblind"><%= projectData._id %></h4>
+      <h4 class="project-text">Team Members</h4>
+      <p id="team-members"><%= projectData.teamMembers.join(', ') %></p>
+      <h4 class="project-text">Description</h4>
+      <span class="projectDesc"><%= projectData.description %></span>
+    </section>
 
-      <section id='individual-project-data' class='container'>
-        <h2><%= projectData.title %></h2>
-        <h4 class="project-text">Deadline:</h4>
-        <h3><%= projectData.deadline %></h3>
-        <h4 id="projectIDblind"><%= projectData._id %></h4>
-        <ul id="team-members">
- 
-        </ul>
-        <h4 class="project-text">Description</h4>
-        <span class='projectDesc'><%= projectData.description %></span>
+    <section id="individual-project-buttons" class="container">
+      <button id="mark-complete-button" class="primary">
+        Mark Complete<i class="fas fa-check-circle"></i>
+      </button>
+      <a
+        href="/dashboard"
+        role="button"
+        class="contrast outline"
+        id="back-to-projects"
+        >Back to Projects
+      </a>
+      <button id="delete-project-button" class="delete-project">
+        Delete Project<i class="fa-sharp fa-solid fa-xmark"></i>
+      </button>
+    </section>
 
-      </section>
-      
-      <section id='individual-project-buttons' class='container'>
-          <button id='mark-complete-button' class='primary'>
-            Mark Complete<i class="fas fa-check-circle"></i>
-          </button>
-          <a href='/dashboard' role='button' class='contrast outline' id='back-to-projects'>Back to Projects</a>
-          <button id='delete-project-button' class='delete-project'>
-            Delete Project<i class="fa-sharp fa-solid fa-xmark"></i>
-          </button> 
-      
-      </section>
-
-      <%- include('partials/footer') %>
-      <script src='/js/project.js'></script>
-
-    </body>
+    <%- include('partials/footer') %>
+    <script src="/js/project.js"></script>
+  </body>
 </html>

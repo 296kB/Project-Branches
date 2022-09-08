@@ -1,5 +1,6 @@
-
 const Project = require('../models/Project')
+const User = require('../models/User')
+const mongoose = require('mongoose')
 
 // Schema: title, description, deadline, status, teamMembers
 // Model name: Project
@@ -16,14 +17,21 @@ module.exports = {
     },
     addProject: async (req, res) => {
         try {
-            await Project.create({
+            let allMembers = [req.user.username].concat(req.body.teamMembers).filter(n => n)
+            let project = await Project.create({
                 title: req.body.title,
                 description: req.body.description, 
                 deadline: req.body.deadline,
-                teamMembers: req.body.teamMembers,
+                teamMembers: allMembers,
                 status: false,
                 userId: req.user.id,
             })
+            // let projectId = project._id;
+            // allMembers.forEach(user => {
+            //     let userLower = user.toLowerCase();
+            //     User.findOneAndUpdate({usernameLower: userLower}, {$push: {projects: mongoose.Types.ObjectId(projectId)}})
+            //     console.log('user: ', user)
+            // })
             console.log(`Project ${req.body.title} created!`)
             res.redirect('/dashboard')
         } catch (err) {

@@ -176,6 +176,12 @@ header a {
   list-style-type: none;
 }
 
+.no-indent {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
 .project-text {
   margin-bottom: 0;
   font-weight: bold;
@@ -184,6 +190,11 @@ header a {
 
 #individual-project-data {
   min-height: 50%;
+}
+
+.small-button {
+  width: 25%;
+  color: black
 }
 
 #individual-project-buttons {
