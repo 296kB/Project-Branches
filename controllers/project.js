@@ -1,7 +1,7 @@
 
 const Project = require('../models/Project')
 
-// Schema: title, description, dueDate, status, teamMembers
+// Schema: title, description, deadline, status, teamMembers
 // Model name: Project
 module.exports = {
     getProject: async (req, res) => {
@@ -19,7 +19,7 @@ module.exports = {
             await Project.create({
                 title: req.body.title,
                 description: req.body.description, 
-                dueDate: req.body.dueDate,
+                deadline: req.body.deadline,
                 teamMembers: req.body.teamMembers,
                 status: false,
                 userId: req.user.id,
