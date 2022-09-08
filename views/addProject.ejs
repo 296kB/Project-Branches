@@ -29,8 +29,12 @@
 
          <label for="teamMembers">
           Team Members
-          <input type="text" id="teamMembers" name="teamMembers" placeholder="Team Members" required>
-          </label>
+          <ul class="no-indent" id="team-members">
+          </ul>
+          <button type="button" class="small-button" id="add-member">Add Team Member</button>
+
+          <!-- <input type="text" id="teamMembers" name="teamMembers[]" placeholder="Team Members">
+          </label> -->
 
           <!--<details role="list">
             <summary aria-haspopup="listbox">Team Members</summary>
@@ -68,6 +72,8 @@
   </main>
   <!-- Footer -->
   <%- include('partials/footer') %>
+
+  <script src="/js/addProject.js"></script>
 </body>
 
 </html>
