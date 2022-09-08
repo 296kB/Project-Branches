@@ -340,24 +340,27 @@ article p {
 article h4 {
   font-size: 110%;
 }
+  article p, article h4 {
+    color: #374956;
+  }
+  
+  article h4.deadline {
+    width: 100%;
+    text-align: right;
+    place-self: center;
+    grid-area: 1 / 2 / span 2 / span 1;
+  }
 
 article p,
 article h4 {
   color: #374956;
 }
 
-article h4.deadline {
-  width: 100%;
-  text-align: right;
-  place-self: center;
-  grid-area: 1 / 2 / span 2 / span 1;
-}
+   /* Project Deadline Styling */
 
 article>* {
   margin-bottom: .6rem;
 }
-
-/* Project Deadline Styling */
 
 .alert {
   background-color: #FEEEB6;
