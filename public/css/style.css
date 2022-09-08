@@ -335,7 +335,7 @@ article h4 {
   color: #374956;
 }
 
-article h4.dueDate {
+article h4.deadline {
   width: 100%;
   text-align: right;
   place-self: center;
@@ -346,13 +346,13 @@ article>* {
   margin-bottom: .6rem;
 }
 
-/* Project Due Date Styling */
+/* Project Deadline Styling */
 
 .alert {
   background-color: #FEEEB6;
 }
 
-.alert .dueDate {
+.alert .deadline {
   color: #B58F00;
 }
 
@@ -373,7 +373,7 @@ article>* {
   background-color: #D5EBFC;
 }
 
-.neutral .dueDate {
+.neutral .deadline {
   color: #2D9BF0;
 }
 
@@ -381,7 +381,7 @@ article>* {
   background-color: #FBC7BD;
 }
 
-.warning .dueDate {
+.warning .deadline {
   color: #F24726;
 }
 
