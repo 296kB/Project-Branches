@@ -28,13 +28,13 @@
         <% projectData.forEach( el => { %>
           <a class='link-to-project' href="/dashboard/project?_id=<%= el._id %>">
             <% if (el.status === true) { %><article class="completed">
-              <% } else if(Math.floor((el.dueDate - new Date())/86400000)>5) { %><article class="neutral">
-                <% } else if (Math.floor((el.dueDate - new Date())/86400000)>=2) { %><article class="alert">
+              <% } else if(Math.floor((el.deadline - new Date())/86400000)>5) { %><article class="neutral">
+                <% } else if (Math.floor((el.deadline - new Date())/86400000)>=2) { %><article class="alert">
                   <% } else { %><article class="warning">
                     <% } %>
             <h4 class="projectTitle" data-id='<%=el._id%>'><%= el.title %></h4>
 
-            <h4 class='<%= el.status === true ? 'fas fa-check-circle' : 'dueDate' %>'><%= el.status === true ? '' : el.dueDate.toLocaleDateString([], { month: 'short',
+            <h4 class='<%= el.status === true ? 'fas fa-check-circle' : 'deadline' %>'><%= el.status === true ? '' : el.deadline.toLocaleDateString([], { month: 'short',
               day: '2-digit' }) %></h4>
 
             <p><%= el.description.length > 40 ? el.description.slice(0,40) + '...' : el.description %></p>
