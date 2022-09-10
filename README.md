@@ -46,7 +46,7 @@
     This was a 5 days long group project built during our time at the #100devs agency. Project goals included using technologies learned up until this point and familiarizing ourselves with the group work dynamics.
 </p>
 
-![Video of application](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Video of application](https://imgur.com/a/fKmse1G)
 ![Picture of Login Screen](/public/assets/branches-screenshot1.png)
 ![Picture of application dashboard](/public/assets/branches-screenshot2.png)
 
