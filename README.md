@@ -1,7 +1,8 @@
 <h3 align="center">Project Branches 🌳</h3>
 
-  <p align="center">
-    A simple mobile and web app that allows users to create lists for their projects. Users can add tasks, delete them and also mark them as complete.
+  <p align="left">
+    A simple mobile and web app that allows users to create lists for their projects. 
+    Users can add tasks, delete them and also mark them as complete.
     <br />
     <a href="https://github.com/296kB/Project-Branches"><strong>Explore the docs »</strong></a>
     <br />
@@ -35,8 +36,6 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -46,7 +45,12 @@
     This was a 5 days long group project built during our time at the #100devs agency. Project goals included using technologies learned up until this point and familiarizing ourselves with the group work dynamics.
 </p>
 
-![Video of application](https://imgur.com/a/fKmse1G)
+<p align="center">
+
+<img src="https://i.imgur.com/L78sDWJ.gif" alt="animated gif of application"/>
+
+</p>
+
 ![Picture of Login Screen](/public/assets/branches-screenshot1.png)
 ![Picture of application dashboard](/public/assets/branches-screenshot2.png)
 
@@ -54,13 +58,13 @@
 
 ### Built With
 
-* [![HTML][html.com]][https://html.com/]
-* [![CSS][html.com/css]][https://html.com/css/]
-* [![JavaScript][javascript.com]][https://www.javascript.com/]
-* [![Node.js][nodejs.org]][https://nodejs.org/en/]
-* [![MongoDB][www.mongodb.com]][https://www.mongodb.com/]
-* [![Mongoose][mongoosejs.com]][https://mongoosejs.com/]
-* [![EJS][ejs.co]][https://ejs.co/]
+* HTML
+* CSS
+* JavaScript
+* Node.js
+* MongoDB
+* Mongoose
+* EJS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,7 +73,7 @@
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
 <!-- GETTING STARTED -->
-### Getting Started
+# Getting Started
 
 ## Clone the repo
    ```sh
